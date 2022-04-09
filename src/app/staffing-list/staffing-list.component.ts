@@ -4,79 +4,103 @@ import GanttChartItem = GanttChartView.Item;
 import GanttChartSettings = GanttChartView.Settings;
 import PredecessorItem = GanttChartView.PredecessorItem;
 import { HttpClient } from '@angular/common/http';
-import { TicketService } from './ticket-list.service';
+import { StaffingService } from './staffing-list.service';
 import { Subscription } from 'rxjs';
-import { Ticket } from './models/ticket.model';
+import { Staff } from '../models/staffing.model';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-staffing-list',
+  templateUrl: './staffing-list.component.html',
+  styleUrls: ['./staffing-list.component.css']
 })
-export class AppComponent implements OnInit, OnDestroy,AfterViewInit {
+
+export class StaffingListComponent implements OnInit,OnDestroy{
+
   title = 'GanttChartView sample';
   private items:GanttChartItem[]=[];
   settings: GanttChartSettings;
   private gcv = DlhSoft.Controls.GanttChartView
   onItemChanged: (item: GanttChartItem, propertyName: string, isDirect: boolean, isFinal: boolean) => void;
+  private ganttChartView;
+  private http:HttpClient
+  staffing: Staff[] = []
+  staffingService: StaffingService
+  private staffingSubs: Subscription
   
-  tickets: Ticket 
-  ticketService: TicketService
-  private ticketSubs: Subscription
-
+  constructor(ticketService: StaffingService, http:HttpClient) {
+    this.staffingService = ticketService
+    this.http = http
+  }
+  
   ngOnInit(): void {
-    this.tickets = this.ticketService.getTickets();
+    console.log("in ngOnInit")
+    this.staffing = this.staffingService.getStaff();
     this.drawChart() 
-    
-    this.ticketSubs = this.ticketService.getTicketUpdateListener().subscribe((tickets:Ticket) => {
-      this.tickets=tickets
-      this.items.push({content:'test', start: new Date(2022,6,1,8)})
-      console.log(this.items)
-      const ganttChartView = document.getElementById("ganttChartView") as HTMLImageElement
-      var settings = <GanttChartSettings>{
-        // Auto-scheduling is initially turned on.
-        areTaskDependencyConstraintsEnabled: true,
-  
-        // Other settings that you can enable and customize as needed in your application.
-        // isGridVisible: false,
-        // gridWidth: '30%',
-        // chartWidth: '70%',
-        // isGridReadOnly: true,
-        // isChartReadOnly: true,
-        // isVirtualizing: false,
-        // isTaskEffortPreservedWhenStartChangesInGrid: true,
-        // border: 'Gray',
-        // gridLines: 'LightGray',
-        // standardBarStyle: 'stroke: Green; fill: LightGreen',
-        // standardCompletedBarStyle: 'stroke: DarkGreen; fill: DarkGreen',
-        // dependencyLineStyle: 'stroke: Green; fill: none; marker-end: url(#ArrowMarker)',
-        // alternativeItemStyle: 'background-color: #f9f9f9', alternativeChartItemStyle: 'fill: #f9f9f9',
-        // itemTemplate: (item) => {
-        //     var toolTip = document.createElementNS('http://www.w3.org/2000/svg', 'title');
-        //     var toolTipContent = item.content + ' • ' + 'Start: ' + item.start.toLocaleString();
-        //     if (!item.isMilestone)
-        //         toolTipContent += ' • ' + 'Finish: ' + item.finish.toLocaleString();
-        //     toolTip.appendChild(document.createTextNode(toolTipContent));
-        //     return toolTip;
-        // },
-        currentTime: new Date(2022, 4 - 1, 12) // Display the current time vertical line of the chart at the project start date.
-      };
-      DlhSoft.Controls.GanttChartView.initialize(ganttChartView, this.items, settings).refresh;
       
+
+    this.http.get<any>('http://localhost:3000/staffing').subscribe(data => {
+    this.staffing = data
+      console.log("staffing object", this.staffing.length, this.staffing)
+
+      for(let i=0;i< this.staffing.length;i++){
+        console.log("engineering ",i, this.staffing[i].Engineer)
+        this.items.push({ content: this.staffing[i].Engineer,indentation: 1, start: new Date (2022,1,1,0)})
+        
+
+        for (let j=0;j<this.staffing[i].Projects.length;j++) {
+          console.log("projects", this.staffing[i].Projects[j])
+          this.items.push({ content: this.staffing[i].Projects[j].Project,indentation: 2, start: this.staffing[i].Projects[j].Start, finish: this.staffing[i].Projects[j].Finish})
+        }
+      }
+      console.log("after items is setup: ", this.items)
+     DlhSoft.Controls.GanttChartView.initialize(this.ganttChartView, this.items, this.settings).refresh;
+      })      
+
+    this.staffingSubs = this.staffingService.getTicketUpdateListener().subscribe((staffing:any) => {
+     /*
+      console.log("staffing object", this.staffing.length, this.staffing)
+
+      for(let i=0;i< this.staffing.length;i++){
+        console.log("engineering ", this.staffing[i].engineer)
+
+        this.items.push({ content: this.staffing[i].engineer,indentation: 1, start: new Date (2022,1,1,0)})
+        
+       // for (let project of this.staffing[i].engineer.projects) {
+       //   console.log("projects", project)
+       //   this.items.push({ content: project.project,indentation: 2, start: project.start, finish: project.finish})
+       // }
+      }
+      console.log("after items is setup: ", this.items)
+     DlhSoft.Controls.GanttChartView.initialize(this.ganttChartView, this.items, this.settings).refresh;
+    */
     });
+  
+    
   }
 
-  ngAfterViewInit(){
 
+  setupItems(){
+    
+    console.log("before setup item", this.staffing)
+    for(let engineer of this.staffing){
+      console.log("engineering ", engineer)
+      this.items.push({ content: engineer,indentation: 1, start: new Date (2022,1,1,0)})
+      for (let project of engineer.projects) {
+        console.log("projects", project)
+        this.items.push({ content: project.project,indentation: 2, start: project.start, finish: project.finish})
+      }
+   }
+   console.log("setup items:",this.items)
   }
+
   ngOnDestroy(): void {
-    this.ticketSubs.unsubscribe();
+    this.staffingSubs.unsubscribe();
     
   }
   drawChart(){
 
-    this.items.push(
-      { content: 'VTA', indentation: 1, start: new Date(2022, 4, 1, 8), finish: new Date(2022, 5, 1, 12), assignmentsContent: 'Resource 2 [50%]'})
+   // this.items.push(
+   //   { content: 'VTA', indentation: 1, start: new Date(2022, 4, 1, 8), finish: new Date(2022, 5, 1, 12), assignmentsContent: 'Resource 2 [50%]'})
       /*
       { content: 'SAT Milestone', indentation: 2,  finish: new Date(2022, 4 , 12, 16), isMilestone:true },
       { content: 'Missolua', indentation: 1, start: new Date(2022, 4, 1, 8), finish: new Date(2022, 7, 1, 12)},
@@ -186,10 +210,11 @@ export class AppComponent implements OnInit, OnDestroy,AfterViewInit {
 
     this.settings = settings;
     //var ganttChartView = document.querySelector('#ganttChartView');
-    const ganttChartView = document.getElementById("ganttChartView") as HTMLImageElement
+   
     //this.gcv=DlhSoft.Controls.GanttChartView.initialize(ganttChartView, this.items, settings)
-    DlhSoft.Controls.GanttChartView.initialize(ganttChartView, this.items, settings).refresh;
-
+    //DlhSoft.Controls.GanttChartView.initialize(this.ganttChartView, this.items, settings).refresh;
+    this.ganttChartView = document.getElementById("staffing-gnattViewChart") as HTMLImageElement
+ 
     this.onItemChanged = (item, propertyName, isDirect, isFinal) => {
       if (!isDirect || !isFinal) // Skip internal changes, and changes occurred during drag operations.
         return;
@@ -198,8 +223,6 @@ export class AppComponent implements OnInit, OnDestroy,AfterViewInit {
     
   }
   
-  constructor(ticketService: TicketService) {
-    this.ticketService = ticketService
-    
-  }
+
+
 }
