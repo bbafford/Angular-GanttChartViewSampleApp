@@ -43,19 +43,23 @@ export class StaffingListComponent implements OnInit,OnDestroy{
       console.log("staffing object", this.staffing.length, this.staffing)
 
       for(let i=0;i< this.staffing.length;i++){
-        console.log("engineering ",i, this.staffing[i].Engineer)
-        this.items.push({ content: this.staffing[i].Engineer,indentation: 1, start: new Date (2022,1,1,0)})
+        console.log("engineering ",i, this.staffing[i].engineer)
+        this.items.push({ content: this.staffing[i].engineer,indentation: 0, start: new Date (2022,1,1,0)})
         
 
-        for (let j=0;j<this.staffing[i].Projects.length;j++) {
-          console.log("projects", this.staffing[i].Projects[j])
-          this.items.push({ content: this.staffing[i].Projects[j].Project,indentation: 2, start: this.staffing[i].Projects[j].Start, finish: this.staffing[i].Projects[j].Finish})
+        for (let j=0;j<this.staffing[i].projects.length;j++) {
+          console.log("projects", this.staffing[i].projects[j])
+          this.items.push({ 
+            content: this.staffing[i].projects[j].project,
+            indentation: 1, 
+            start: new Date(this.staffing[i].projects[j].start), 
+            finish: new Date( this.staffing[i].projects[j].finish)})
         }
       }
       console.log("after items is setup: ", this.items)
      DlhSoft.Controls.GanttChartView.initialize(this.ganttChartView, this.items, this.settings).refresh;
       })      
-
+    
     this.staffingSubs = this.staffingService.getTicketUpdateListener().subscribe((staffing:any) => {
      /*
       console.log("staffing object", this.staffing.length, this.staffing)

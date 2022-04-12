@@ -4,7 +4,7 @@ import GanttChartItem = GanttChartView.Item;
 import GanttChartSettings = GanttChartView.Settings;
 import PredecessorItem = GanttChartView.PredecessorItem;
 import { HttpClient } from '@angular/common/http';
-import { TicketService } from './ticket-list.service';
+import { TicketService } from './-ticket-list.service';
 import { Subscription } from 'rxjs';
 import { Ticket } from './models/ticket.model';
 

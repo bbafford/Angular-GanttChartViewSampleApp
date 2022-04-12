@@ -9,12 +9,13 @@ import { PertChartView } from './DlhSoft/DlhSoft.ProjectData.PertChart.Angular.C
 import { NetworkDiagramView } from './DlhSoft/DlhSoft.ProjectData.PertChart.Angular.Components';
 import { HttpClientModule } from '@angular/common/http';
 import { StaffingListComponent } from './staffing-list/staffing-list.component';
+import { TicketListComponent } from './ticket-list/ticket-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GanttChartView, ScheduleChartView, LoadChartView,
-    PertChartView, NetworkDiagramView, StaffingListComponent
+    PertChartView, NetworkDiagramView, StaffingListComponent, TicketListComponent
   ],
   imports: [
     BrowserModule,
