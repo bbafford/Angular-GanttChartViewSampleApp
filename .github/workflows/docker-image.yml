@@ -17,6 +17,6 @@ jobs:
     - name: login
       run: docker login -u bbafford -p f6394f44-ebc2-4e2f-99a9-68186cad25f0
     - name: Build the Docker image
-      run: docker build .  --tag bbafford/datascience
+      run: docker build .  --tag bbafford/sedashboard
     - name: Push docker image
-      run: docker push bbafford/datascience
+      run: docker push bbafford/sedashboard
