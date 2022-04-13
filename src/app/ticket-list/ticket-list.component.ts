@@ -95,7 +95,7 @@ export class TicketListComponent implements OnInit, OnDestroy {
     console.log("drawMilestoneIcons: this.mapMilestoneDates",this.mapMilestoneDates)
     
     for (let entry of this.mapMilestoneDates.entries() ){
-      console.log("entry is keyh: ", entry[0])  
+      console.log("entry is key: ", entry[0])  
       console.log("entry is value: ", entry[1])  
       if(projects.has(entry[0].project) == false){
         projects.add(entry[0].project)
@@ -108,14 +108,14 @@ export class TicketListComponent implements OnInit, OnDestroy {
       console.log("Looping through projects Set- project",p[0])
       this.itemsMilestones.push({'content': p[0], indentation: 0, start:new Date(2022,1,1)})
       for (let entry of this.mapMilestoneDates.entries()){
-          console.log("drawMilestoneIcons - milestone loop",entry[0])
+          console.log("drawMilestoneIcons - milestone loop",entry[0], " - ", entry[1])
           key = entry[0]
           values = entry[1]
-          console.log("key.project", key.project, " p", p[0], "valuation - ",key.project == p[0])
+          //console.log("key.project", key.project, " p", p[0], "valuation - ",key.project == p[0])
           if (key.project == p[0] ){
             console.log("actually in this if loop")
             this.itemsMilestones.push({'content': key.milestone, indentation: 1, start:new Date(key.start), finish:new Date(key.start),  isMilestone:true})
-            this.itemsMilestones[this.itemsMilestones.length-1]['description']=values
+            this.itemsMilestones[this.itemsMilestones.length-1]['hours']=values
           }
         
         }
@@ -219,6 +219,7 @@ export class TicketListComponent implements OnInit, OnDestroy {
      
     //this.items['description'] = 'Custom description';
      columns.push({ header: 'Description', width: 200, cellTemplate: (item) => { return item['ganttChartView'].ownerDocument.createTextNode(item['description']); } });
+     columns.push({ header: 'hours', width: 200, cellTemplate: (item) => { return item['ganttChartView'].ownerDocument.createTextNode(item['hours']); } });
      //columns[10 + indexOffset].cellTemplate = GanttChartView.getAssignmentSelectorColumnTemplate(184, (item) { return ['Resource 1', 'Resource 2'] });
      //items[7]['targetDate'] = new Date(2016, 2 - 1, 28, 12, 0, 0);
      //columns.push({ header: 'Target date', width: 140, cellTemplate: (item)  => {
