@@ -13,6 +13,7 @@ import PredecessorItem = GanttChartView.PredecessorItem;
 //models
 import { Ticket } from '../models/ticket.model';
 import { Milestones } from '../models/milestones.model';
+//import { isNull } from 'util';
 
 @Component({
   selector: 'app-ticket-list',
@@ -26,11 +27,12 @@ export class TicketListComponent implements OnInit, OnDestroy {
   private mapMilestoneDates = new Map();
   private milestone:string
   private milestones:Milestones[] =[]
-  
+  private projects =[]  
   //Project milestones and the amount of expected work
   private itemsMilestones: GanttChartItem[]=[]
+  private milestoneslist=[]
 
-  title = 'GanttChartView sample';
+  title = 'Tickets and Milestones';
   private items:GanttChartItem[]=[];
   private settings: GanttChartSettings;
   private gcv = DlhSoft.Controls.GanttChartView
@@ -46,44 +48,112 @@ export class TicketListComponent implements OnInit, OnDestroy {
     this.ticketService = ticketService
     this.http = http
   }
-
+  
   ngOnInit() {
-    const ganttChartView = document.getElementById("ganttChartView") as HTMLImageElement
+    
     this.configureSettings();
 
-  //  this.ticketSubs = this.ticketService.getTicketUpdateListener().subscribe((data:Ticket) => {
-    this.http.get<Ticket>('http://localhost:3000/tickets').subscribe(data => {
-      this.tickets = data;
-      console.log("in ticket list:",data.issues)
-      let running_total=0  
-      //Get a list of time by project and milestone
-      for (let i=0; i < data.issues.length;i++){
+    this.projects = ["Pierce Transit - Lakewood, WA",
+     "VTA - Santa Clara",
+    "AC Transit - Oakland - California", 
+    "WMATA - Washington DC Transit", 
+    "METRA Transit -  Metropolitan Rail Corporation", 
+    "CCB - Culver City", 
+    "TTC - Toronto"
+  ]
 
-        this.milestone = data.issues[i].fields.customfield_15761[0].value
-        let estimate = data.issues[i].fields.progress.total
+    this.getMilestoneHoursList();
 
-        if(this.mapProgressbyMilestone.has(this.milestone)){
-          running_total= this.mapProgressbyMilestone.get(this.milestone)
-        }
-        else{
-          running_total=0
-        }
-        console.log(estimate)
-        
-        console.log(running_total)
-        this.mapProgressbyMilestone.set(this.milestone,estimate+running_total)
-      }
-      console.log(this.mapProgressbyMilestone)
-      DlhSoft.Controls.GanttChartView.initialize(ganttChartView, this.items, this.settings).refresh;
-      console.log("about to hit setup milestones hours")
-      this.setupMilestoneHours();
-    
-  });
-  
-  
 
   }
 
+  getMilestoneHoursList(){
+    this.http.get<Milestones[]>('http://localhost:3000/milestones').subscribe(data => {
+      this.milestoneslist=data
+      console.log("MILESTONE LIST: ", this.milestoneslist)
+      this.drawTickets();
+    });
+  }
+
+  drawTickets(){
+    var localitems:GanttChartItem[]=[];
+    var k;
+    var milestoneDate:Date;
+    const ganttChartView = document.getElementById("ganttChartView") as HTMLImageElement
+
+    for (let i=0; i<this.projects.length; i++){
+
+      //run through the list of projects, for each of the projects, query the server and pull down the tickets for that project.
+      
+      this.http.get<Ticket>('http://localhost:3001/tickets?customers='+this.projects[i]).subscribe(data => {
+        //Clear the milestone list of before working on this project
+        localitems = []
+        this.mapProgressbyMilestone.clear()
+        //push the project into the list of items for the map
+        localitems.push({'content': this.projects[i], indentation: 0, start:new Date(2022,1,1)})
+        
+        this.tickets = data;
+       // console.log("in ticket list:",data.issues)
+        let running_total=0  
+        //Get a list of time by project and milestone  
+        //sum the projects by 
+        for (let i=0; i < data.issues.length;i++){
+             
+          if ((data.issues[i].fields.customfield_15761) != null) {
+            //get the milestone name
+            this.milestone = data.issues[i].fields.customfield_15761[0].value
+          } 
+          else{
+            this.milestone = "empty"
+          }
+          //find the estimated time required to complete the ticket
+          let estimate = data.issues[i].fields.progress.total
+          //find out if the set
+          if(this.mapProgressbyMilestone.has(this.milestone)){
+            running_total= this.mapProgressbyMilestone.get(this.milestone)
+          }
+          else{
+            running_total=0
+          }
+          //console.log("ticket number:", data.issues[i].key, " estimate: ", estimate, " running totle:" , running_total)
+          this.mapProgressbyMilestone.set(this.milestone,estimate+running_total)
+        }
+        console.log(this.mapProgressbyMilestone)
+        
+        console.log("about to hit setup milestones hours")
+        //loop through the milesstones you've just created and add them to the map
+        k=0;
+  
+        for (let entry of this.mapProgressbyMilestone.entries() ){
+          //find the milestone date by looking throught milestone list and comparing the project and milestone to what we are looking at 
+          //right now
+  
+          for(let j=0; j< this.milestoneslist.length;j++){
+            console.log("milestone name: ",this.milestoneslist[j].milestone, " milestone project", this.milestoneslist[j].project)
+  
+            if (entry[0]==this.milestoneslist[j].milestone ||
+                this.projects[i] == this.milestoneslist[j].project){
+                  milestoneDate = this.milestoneslist[j].start
+                  console.log("The Milestone date is:", milestoneDate)
+                }   
+          }
+  
+          k++;
+         // console.log("entry is key: ", entry[0])  
+         // console.log("entry is value: ", entry[1])  
+          console.log(localitems)
+          localitems.push({'content':entry[0], indentation: 1,start: milestoneDate, isMilestone:true})
+          localitems[k]['hours'] =entry[1]/3600
+  
+        } 
+        this.items = [...this.items, ...localitems]
+        console.log("the combined array is", this.items)
+  
+        //this.setupMilestoneHours();
+        DlhSoft.Controls.GanttChartView.initialize(ganttChartView, this.items, this.settings).refresh;
+       });
+      }
+  }
   drawMilestoneIcons(){
     //build a list of unique projects first - prob a cleaner way of doing this using a lamba function and map...
     
@@ -127,7 +197,7 @@ export class TicketListComponent implements OnInit, OnDestroy {
   }
   
   setupMilestoneHours(){
-  //  this.milestoneSubs=this.ticketService.getMilestoneUpdateListener().subscribe((data:any) =>{
+ 
     this.http.get<Milestones[]>('http://localhost:3000/milestones').subscribe(data => {
         this.milestones = data
         console.log(data)
@@ -143,7 +213,6 @@ export class TicketListComponent implements OnInit, OnDestroy {
 
           }
         }
-        console.log("exiting!!!")
           //draw the milestones on the chart and make it so when you hover over, it tells you the hours
       this.drawMilestoneIcons();
     });
@@ -236,7 +305,7 @@ export class TicketListComponent implements OnInit, OnDestroy {
     this.onItemChanged = (item, propertyName, isDirect, isFinal) => {
       if (!isDirect || !isFinal) // Skip internal changes, and changes occurred during drag operations.
         return;
-      console.log(propertyName + ' changed for ' + item.content + '.');
+      console.log(propertyName + ' changed for ' + item.content + '.' + item.index + item[propertyName] +'.');
     }
   }
   ngOnDestroy(): void {

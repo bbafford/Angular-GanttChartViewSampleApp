@@ -1,0 +1,1037 @@
+{
+	"tickets": {
+		"expand": "schema,names",
+		"startAt": 0,
+		"maxResults": 50,
+		"total": 130,
+		"issues": [
+			{
+				"expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+				"id": "418659",
+				"self": "https://jira.cleverdevices.com:8443/rest/api/2/issue/418659",
+				"key": "SE-53310",
+				"fields": {
+					"summary": "[SE Task] Pierce Branded Responsive Website - Part 2",
+					"progress": {
+						"progress": 0,
+						"total": 0
+					},
+					"customfield_15761": [
+						{
+							"self": "https://jira.cleverdevices.com:8443/rest/api/2/customFieldOption/19563",
+							"value": "Mini-Fleet",
+							"id": "19563"
+						}
+					]
+				}
+			},
+			{
+				"expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+				"id": "418657",
+				"self": "https://jira.cleverdevices.com:8443/rest/api/2/issue/418657",
+				"key": "SE-53309",
+				"fields": {
+					"summary": "[SE Task] Pierce Branded Responsive Website- part 1",
+					"progress": {
+						"progress": 0,
+						"total": 0
+					},
+					"customfield_15761": [
+						{
+							"self": "https://jira.cleverdevices.com:8443/rest/api/2/customFieldOption/19563",
+							"value": "Mini-Fleet",
+							"id": "19563"
+						}
+					]
+				}
+			},
+			{
+				"expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+				"id": "418530",
+				"self": "https://jira.cleverdevices.com:8443/rest/api/2/issue/418530",
+				"key": "SE-53262",
+				"fields": {
+					"summary": " [SE Task] Pierce Branded Responsive Website",
+					"progress": {
+						"progress": 0,
+						"total": 0
+					},
+					"customfield_15761": [
+						{
+							"self": "https://jira.cleverdevices.com:8443/rest/api/2/customFieldOption/19563",
+							"value": "Mini-Fleet",
+							"id": "19563"
+						}
+					]
+				}
+			},
+			{
+				"expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+				"id": "418527",
+				"self": "https://jira.cleverdevices.com:8443/rest/api/2/issue/418527",
+				"key": "SE-53261",
+				"fields": {
+					"summary": "[SE] Pierce Branded Responsive Website",
+					"progress": {
+						"progress": 0,
+						"total": 0
+					},
+					"customfield_15761": [
+						{
+							"self": "https://jira.cleverdevices.com:8443/rest/api/2/customFieldOption/19563",
+							"value": "Mini-Fleet",
+							"id": "19563"
+						}
+					]
+				}
+			},
+			{
+				"expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+				"id": "417733",
+				"self": "https://jira.cleverdevices.com:8443/rest/api/2/issue/417733",
+				"key": "SE-53094",
+				"fields": {
+					"summary": "Pierce Transit - Scrum call meetings ",
+					"progress": {
+						"progress": 0,
+						"total": 0
+					},
+					"customfield_15761": [
+						{
+							"self": "https://jira.cleverdevices.com:8443/rest/api/2/customFieldOption/19568",
+							"value": "CloseOut",
+							"id": "19568"
+						}
+					]
+				}
+			},
+			{
+				"expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+				"id": "417730",
+				"self": "https://jira.cleverdevices.com:8443/rest/api/2/issue/417730",
+				"key": "SE-53092",
+				"fields": {
+					"summary": "Pierce Transit - Bustime Not Showing Cancelled ",
+					"progress": {
+						"progress": 0,
+						"total": 0
+					},
+					"customfield_15761": [
+						{
+							"self": "https://jira.cleverdevices.com:8443/rest/api/2/customFieldOption/19563",
+							"value": "Mini-Fleet",
+							"id": "19563"
+						}
+					]
+				}
+			},
+			{
+				"expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+				"id": "415160",
+				"self": "https://jira.cleverdevices.com:8443/rest/api/2/issue/415160",
+				"key": "SE-52684",
+				"fields": {
+					"summary": "Pierce Transit - Mini-Fleet Testing 02/28/2022 - 03/04/2022",
+					"progress": {
+						"progress": 144000,
+						"total": 144000,
+						"percent": 100
+					},
+					"customfield_15761": [
+						{
+							"self": "https://jira.cleverdevices.com:8443/rest/api/2/customFieldOption/19563",
+							"value": "Mini-Fleet",
+							"id": "19563"
+						}
+					]
+				}
+			},
+			{
+				"expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+				"id": "412713",
+				"self": "https://jira.cleverdevices.com:8443/rest/api/2/issue/412713",
+				"key": "SE-52202",
+				"fields": {
+					"summary": "Pierce Transit - Help Pierce Transit set up Workstations in CCC",
+					"progress": {
+						"progress": 10800,
+						"total": 10800,
+						"percent": 100
+					},
+					"customfield_15761": [
+						{
+							"self": "https://jira.cleverdevices.com:8443/rest/api/2/customFieldOption/19563",
+							"value": "Mini-Fleet",
+							"id": "19563"
+						}
+					]
+				}
+			},
+			{
+				"expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+				"id": "412712",
+				"self": "https://jira.cleverdevices.com:8443/rest/api/2/issue/412712",
+				"key": "SE-52201",
+				"fields": {
+					"summary": "Pierce Transit - Discuss and configure CleverCAD for LDAP Groups",
+					"progress": {
+						"progress": 10800,
+						"total": 10800,
+						"percent": 100
+					},
+					"customfield_15761": [
+						{
+							"self": "https://jira.cleverdevices.com:8443/rest/api/2/customFieldOption/19563",
+							"value": "Mini-Fleet",
+							"id": "19563"
+						}
+					]
+				}
+			},
+			{
+				"expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+				"id": "412458",
+				"self": "https://jira.cleverdevices.com:8443/rest/api/2/issue/412458",
+				"key": "SE-52144",
+				"fields": {
+					"summary": "Pierce Transit - Hand configure S15 database to work on vehicles",
+					"progress": {
+						"progress": 14400,
+						"total": 14400,
+						"percent": 100
+					},
+					"customfield_15761": [
+						{
+							"self": "https://jira.cleverdevices.com:8443/rest/api/2/customFieldOption/19563",
+							"value": "Mini-Fleet",
+							"id": "19563"
+						}
+					]
+				}
+			},
+			{
+				"expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+				"id": "410820",
+				"self": "https://jira.cleverdevices.com:8443/rest/api/2/issue/410820",
+				"key": "SE-51889",
+				"fields": {
+					"summary": "Pierce Transit - Configure Audio Profiles for DB",
+					"progress": {
+						"progress": 0,
+						"total": 0
+					},
+					"customfield_15761": [
+						{
+							"self": "https://jira.cleverdevices.com:8443/rest/api/2/customFieldOption/19563",
+							"value": "Mini-Fleet",
+							"id": "19563"
+						}
+					]
+				}
+			},
+			{
+				"expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+				"id": "410819",
+				"self": "https://jira.cleverdevices.com:8443/rest/api/2/issue/410819",
+				"key": "SE-51888",
+				"fields": {
+					"summary": "Pierce Transit - Incident Form Creation",
+					"progress": {
+						"progress": 0,
+						"total": 0
+					},
+					"customfield_15761": [
+						{
+							"self": "https://jira.cleverdevices.com:8443/rest/api/2/customFieldOption/19563",
+							"value": "Mini-Fleet",
+							"id": "19563"
+						}
+					]
+				}
+			},
+			{
+				"expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+				"id": "410682",
+				"self": "https://jira.cleverdevices.com:8443/rest/api/2/issue/410682",
+				"key": "SE-51860",
+				"fields": {
+					"summary": "DataLink ATP for Pilot Testing",
+					"progress": {
+						"progress": 7200,
+						"total": 7200,
+						"percent": 100
+					},
+					"customfield_15761": [
+						{
+							"self": "https://jira.cleverdevices.com:8443/rest/api/2/customFieldOption/19563",
+							"value": "Mini-Fleet",
+							"id": "19563"
+						}
+					]
+				}
+			},
+			{
+				"expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+				"id": "410576",
+				"self": "https://jira.cleverdevices.com:8443/rest/api/2/issue/410576",
+				"key": "SE-51841",
+				"fields": {
+					"summary": "Pierce Transit - TSP Relay issue Debugging.",
+					"progress": {
+						"progress": 43200,
+						"total": 43200,
+						"percent": 100
+					},
+					"customfield_15761": [
+						{
+							"self": "https://jira.cleverdevices.com:8443/rest/api/2/customFieldOption/19563",
+							"value": "Mini-Fleet",
+							"id": "19563"
+						}
+					]
+				}
+			},
+			{
+				"expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+				"id": "410453",
+				"self": "https://jira.cleverdevices.com:8443/rest/api/2/issue/410453",
+				"key": "SE-51769",
+				"fields": {
+					"summary": "Create DPLY Tickets for Test Environment",
+					"progress": {
+						"progress": 3600,
+						"total": 3600,
+						"percent": 100
+					},
+					"customfield_15761": [
+						{
+							"self": "https://jira.cleverdevices.com:8443/rest/api/2/customFieldOption/19563",
+							"value": "Mini-Fleet",
+							"id": "19563"
+						}
+					]
+				}
+			},
+			{
+				"expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+				"id": "410427",
+				"self": "https://jira.cleverdevices.com:8443/rest/api/2/issue/410427",
+				"key": "SE-51763",
+				"fields": {
+					"summary": "Pierce Transit - Configure EmployeeFeed to run daily",
+					"progress": {
+						"progress": 10800,
+						"total": 10800,
+						"percent": 100
+					},
+					"customfield_15761": [
+						{
+							"self": "https://jira.cleverdevices.com:8443/rest/api/2/customFieldOption/19563",
+							"value": "Mini-Fleet",
+							"id": "19563"
+						}
+					]
+				}
+			},
+			{
+				"expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+				"id": "410425",
+				"self": "https://jira.cleverdevices.com:8443/rest/api/2/issue/410425",
+				"key": "SE-51762",
+				"fields": {
+					"summary": "Pierce Transit - Configure VehicleFeed for Fleet Manager",
+					"progress": {
+						"progress": 0,
+						"total": 0
+					},
+					"customfield_15761": [
+						{
+							"self": "https://jira.cleverdevices.com:8443/rest/api/2/customFieldOption/19563",
+							"value": "Mini-Fleet",
+							"id": "19563"
+						}
+					]
+				}
+			},
+			{
+				"expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+				"id": "410302",
+				"self": "https://jira.cleverdevices.com:8443/rest/api/2/issue/410302",
+				"key": "SE-51751",
+				"fields": {
+					"summary": "Pierce transit - CleverCAD Pilot Testing ATP",
+					"progress": {
+						"progress": 0,
+						"total": 0
+					},
+					"customfield_15761": [
+						{
+							"self": "https://jira.cleverdevices.com:8443/rest/api/2/customFieldOption/21729",
+							"value": "N/A",
+							"id": "21729"
+						}
+					]
+				}
+			},
+			{
+				"expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+				"id": "410076",
+				"self": "https://jira.cleverdevices.com:8443/rest/api/2/issue/410076",
+				"key": "SE-51683",
+				"fields": {
+					"summary": "TSB 2022-0121: Verify if PT is an impacted customer",
+					"progress": {
+						"progress": 0,
+						"total": 0
+					},
+					"customfield_15761": [
+						{
+							"self": "https://jira.cleverdevices.com:8443/rest/api/2/customFieldOption/21729",
+							"value": "N/A",
+							"id": "21729"
+						}
+					]
+				}
+			},
+			{
+				"expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+				"id": "410011",
+				"self": "https://jira.cleverdevices.com:8443/rest/api/2/issue/410011",
+				"key": "SE-51659",
+				"fields": {
+					"summary": "Pierce Transit - Inventory Container from First Shipment of Equipment",
+					"progress": {
+						"progress": 7260,
+						"total": 7260,
+						"percent": 100
+					},
+					"customfield_15761": [
+						{
+							"self": "https://jira.cleverdevices.com:8443/rest/api/2/customFieldOption/19563",
+							"value": "Mini-Fleet",
+							"id": "19563"
+						}
+					]
+				}
+			},
+			{
+				"expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+				"id": "409520",
+				"self": "https://jira.cleverdevices.com:8443/rest/api/2/issue/409520",
+				"key": "SE-51559",
+				"fields": {
+					"summary": "Pierce, import S15 into R+",
+					"progress": {
+						"progress": 0,
+						"total": 0
+					},
+					"customfield_15761": [
+						{
+							"self": "https://jira.cleverdevices.com:8443/rest/api/2/customFieldOption/19561",
+							"value": "FAT",
+							"id": "19561"
+						}
+					]
+				}
+			},
+			{
+				"expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+				"id": "404569",
+				"self": "https://jira.cleverdevices.com:8443/rest/api/2/issue/404569",
+				"key": "SE-50654",
+				"fields": {
+					"summary": "TSB 2021-1214: Verify if PT is an impacted customer",
+					"progress": {
+						"progress": 0,
+						"total": 0
+					},
+					"customfield_15761": [
+						{
+							"self": "https://jira.cleverdevices.com:8443/rest/api/2/customFieldOption/21729",
+							"value": "N/A",
+							"id": "21729"
+						}
+					]
+				}
+			},
+			{
+				"expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+				"id": "403397",
+				"self": "https://jira.cleverdevices.com:8443/rest/api/2/issue/403397",
+				"key": "SE-50422",
+				"fields": {
+					"summary": "TSB 2021-1102: Verify if PT is an impacted customer",
+					"progress": {
+						"progress": 0,
+						"total": 0
+					},
+					"customfield_15761": [
+						{
+							"self": "https://jira.cleverdevices.com:8443/rest/api/2/customFieldOption/21729",
+							"value": "N/A",
+							"id": "21729"
+						}
+					]
+				}
+			},
+			{
+				"expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+				"id": "400752",
+				"self": "https://jira.cleverdevices.com:8443/rest/api/2/issue/400752",
+				"key": "SE-49990",
+				"fields": {
+					"summary": "TSB 2021-1201: PT: Impacted customer: IVN5 – 92HD73C Audio Codec",
+					"progress": {
+						"progress": 3600,
+						"total": 3600,
+						"percent": 100
+					},
+					"customfield_15761": [
+						{
+							"self": "https://jira.cleverdevices.com:8443/rest/api/2/customFieldOption/21729",
+							"value": "N/A",
+							"id": "21729"
+						}
+					]
+				}
+			},
+			{
+				"expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+				"id": "400660",
+				"self": "https://jira.cleverdevices.com:8443/rest/api/2/issue/400660",
+				"key": "SE-49963",
+				"fields": {
+					"summary": "Pierce transit - CAD and Disruption Management ATP Testing",
+					"progress": {
+						"progress": 0,
+						"total": 0
+					},
+					"customfield_15761": [
+						{
+							"self": "https://jira.cleverdevices.com:8443/rest/api/2/customFieldOption/21729",
+							"value": "N/A",
+							"id": "21729"
+						}
+					]
+				}
+			},
+			{
+				"expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+				"id": "400399",
+				"self": "https://jira.cleverdevices.com:8443/rest/api/2/issue/400399",
+				"key": "SE-49917",
+				"fields": {
+					"summary": "TSB 2021-0930: PT: Impacted customer: Terminal Timepoint Window Issue",
+					"progress": {
+						"progress": 0,
+						"total": 0
+					},
+					"customfield_15761": [
+						{
+							"self": "https://jira.cleverdevices.com:8443/rest/api/2/customFieldOption/21729",
+							"value": "N/A",
+							"id": "21729"
+						}
+					]
+				}
+			},
+			{
+				"expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+				"id": "398425",
+				"self": "https://jira.cleverdevices.com:8443/rest/api/2/issue/398425",
+				"key": "SE-49629",
+				"fields": {
+					"summary": "Pierce Transit: BusTime ATP dry run",
+					"progress": {
+						"progress": 0,
+						"total": 0
+					},
+					"customfield_15761": [
+						{
+							"self": "https://jira.cleverdevices.com:8443/rest/api/2/customFieldOption/21729",
+							"value": "N/A",
+							"id": "21729"
+						}
+					]
+				}
+			},
+			{
+				"expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+				"id": "398318",
+				"self": "https://jira.cleverdevices.com:8443/rest/api/2/issue/398318",
+				"key": "SE-49606",
+				"fields": {
+					"summary": "Pierce Transit: Datalink ATP dry run",
+					"progress": {
+						"progress": 7200,
+						"total": 7200,
+						"percent": 100
+					},
+					"customfield_15761": [
+						{
+							"self": "https://jira.cleverdevices.com:8443/rest/api/2/customFieldOption/19561",
+							"value": "FAT",
+							"id": "19561"
+						}
+					]
+				}
+			},
+			{
+				"expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+				"id": "396250",
+				"self": "https://jira.cleverdevices.com:8443/rest/api/2/issue/396250",
+				"key": "SE-49267",
+				"fields": {
+					"summary": "Setup Pierce Workstations",
+					"progress": {
+						"progress": 54000,
+						"total": 54000,
+						"percent": 100
+					},
+					"customfield_15761": [
+						{
+							"self": "https://jira.cleverdevices.com:8443/rest/api/2/customFieldOption/19561",
+							"value": "FAT",
+							"id": "19561"
+						}
+					]
+				}
+			},
+			{
+				"expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+				"id": "395946",
+				"self": "https://jira.cleverdevices.com:8443/rest/api/2/issue/395946",
+				"key": "SE-49204",
+				"fields": {
+					"summary": "Discuss DNS, setup HTTPS, need an HTTPS Certification with customer about BT Website",
+					"progress": {
+						"progress": 0,
+						"total": 0
+					},
+					"customfield_15761": [
+						{
+							"self": "https://jira.cleverdevices.com:8443/rest/api/2/customFieldOption/19561",
+							"value": "FAT",
+							"id": "19561"
+						}
+					]
+				}
+			},
+			{
+				"expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+				"id": "395942",
+				"self": "https://jira.cleverdevices.com:8443/rest/api/2/issue/395942",
+				"key": "SE-49201",
+				"fields": {
+					"summary": "Configure Disruption Management (CleverWorks) with BusTime",
+					"progress": {
+						"progress": 32400,
+						"total": 32400,
+						"percent": 100
+					},
+					"customfield_15761": [
+						{
+							"self": "https://jira.cleverdevices.com:8443/rest/api/2/customFieldOption/19561",
+							"value": "FAT",
+							"id": "19561"
+						}
+					]
+				}
+			},
+			{
+				"expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+				"id": "395939",
+				"self": "https://jira.cleverdevices.com:8443/rest/api/2/issue/395939",
+				"key": "SE-49200",
+				"fields": {
+					"summary": "CAD Interface to BusTime",
+					"progress": {
+						"progress": 1800,
+						"total": 1800,
+						"percent": 100
+					},
+					"customfield_15761": [
+						{
+							"self": "https://jira.cleverdevices.com:8443/rest/api/2/customFieldOption/19561",
+							"value": "FAT",
+							"id": "19561"
+						}
+					]
+				}
+			},
+			{
+				"expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+				"id": "395938",
+				"self": "https://jira.cleverdevices.com:8443/rest/api/2/issue/395938",
+				"key": "SE-49199",
+				"fields": {
+					"summary": "Configure CAD/PTSGateway connection",
+					"progress": {
+						"progress": 7200,
+						"total": 7200,
+						"percent": 100
+					},
+					"customfield_15761": [
+						{
+							"self": "https://jira.cleverdevices.com:8443/rest/api/2/customFieldOption/19561",
+							"value": "FAT",
+							"id": "19561"
+						}
+					]
+				}
+			},
+			{
+				"expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+				"id": "395937",
+				"self": "https://jira.cleverdevices.com:8443/rest/api/2/issue/395937",
+				"key": "SE-49198",
+				"fields": {
+					"summary": "Configure CAD/Fleet Manager Connection",
+					"progress": {
+						"progress": 3600,
+						"total": 3600,
+						"percent": 100
+					},
+					"customfield_15761": [
+						{
+							"self": "https://jira.cleverdevices.com:8443/rest/api/2/customFieldOption/19561",
+							"value": "FAT",
+							"id": "19561"
+						}
+					]
+				}
+			},
+			{
+				"expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+				"id": "395936",
+				"self": "https://jira.cleverdevices.com:8443/rest/api/2/issue/395936",
+				"key": "SE-49197",
+				"fields": {
+					"summary": "Implement LDAP for CAD and other products (CleverWorks, etc)",
+					"progress": {
+						"progress": 14400,
+						"total": 14400,
+						"percent": 100
+					},
+					"customfield_15761": [
+						{
+							"self": "https://jira.cleverdevices.com:8443/rest/api/2/customFieldOption/19561",
+							"value": "FAT",
+							"id": "19561"
+						}
+					]
+				}
+			},
+			{
+				"expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+				"id": "395932",
+				"self": "https://jira.cleverdevices.com:8443/rest/api/2/issue/395932",
+				"key": "SE-49194",
+				"fields": {
+					"summary": "Discuss LDAP/AD for CAD",
+					"progress": {
+						"progress": 7200,
+						"total": 7200,
+						"percent": 100
+					},
+					"customfield_15761": [
+						{
+							"self": "https://jira.cleverdevices.com:8443/rest/api/2/customFieldOption/19561",
+							"value": "FAT",
+							"id": "19561"
+						}
+					]
+				}
+			},
+			{
+				"expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+				"id": "395928",
+				"self": "https://jira.cleverdevices.com:8443/rest/api/2/issue/395928",
+				"key": "SE-49192",
+				"fields": {
+					"summary": "Create KML Layer and Import into CAD",
+					"progress": {
+						"progress": 7200,
+						"total": 7200,
+						"percent": 100
+					},
+					"customfield_15761": [
+						{
+							"self": "https://jira.cleverdevices.com:8443/rest/api/2/customFieldOption/19561",
+							"value": "FAT",
+							"id": "19561"
+						}
+					]
+				}
+			},
+			{
+				"expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+				"id": "395927",
+				"self": "https://jira.cleverdevices.com:8443/rest/api/2/issue/395927",
+				"key": "SE-49191",
+				"fields": {
+					"summary": "Discuss Employee Feed Implementation",
+					"progress": {
+						"progress": 0,
+						"total": 0
+					},
+					"customfield_15761": [
+						{
+							"self": "https://jira.cleverdevices.com:8443/rest/api/2/customFieldOption/19561",
+							"value": "FAT",
+							"id": "19561"
+						}
+					]
+				}
+			},
+			{
+				"expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+				"id": "395728",
+				"self": "https://jira.cleverdevices.com:8443/rest/api/2/issue/395728",
+				"key": "SE-49150",
+				"fields": {
+					"summary": "Non-Rev MAR CAD Configuration (TAIP)",
+					"progress": {
+						"progress": 0,
+						"total": 0
+					},
+					"customfield_15761": [
+						{
+							"self": "https://jira.cleverdevices.com:8443/rest/api/2/customFieldOption/19561",
+							"value": "FAT",
+							"id": "19561"
+						}
+					]
+				}
+			},
+			{
+				"expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+				"id": "395719",
+				"self": "https://jira.cleverdevices.com:8443/rest/api/2/issue/395719",
+				"key": "SE-49148",
+				"fields": {
+					"summary": "Non-Rev MAR DCC Configuration (TAIP)",
+					"progress": {
+						"progress": 0,
+						"total": 0
+					},
+					"customfield_15761": [
+						{
+							"self": "https://jira.cleverdevices.com:8443/rest/api/2/customFieldOption/19561",
+							"value": "FAT",
+							"id": "19561"
+						}
+					]
+				}
+			},
+			{
+				"expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+				"id": "395579",
+				"self": "https://jira.cleverdevices.com:8443/rest/api/2/issue/395579",
+				"key": "SE-49107",
+				"fields": {
+					"summary": "Discuss Employee Feed with Pierce Transit",
+					"progress": {
+						"progress": 3600,
+						"total": 3600,
+						"percent": 100
+					},
+					"customfield_15761": [
+						{
+							"self": "https://jira.cleverdevices.com:8443/rest/api/2/customFieldOption/19561",
+							"value": "FAT",
+							"id": "19561"
+						}
+					]
+				}
+			},
+			{
+				"expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+				"id": "395578",
+				"self": "https://jira.cleverdevices.com:8443/rest/api/2/issue/395578",
+				"key": "SE-49106",
+				"fields": {
+					"summary": "Determine location on CAD Server for VOAM flat file",
+					"progress": {
+						"progress": 3600,
+						"total": 3600,
+						"percent": 100
+					},
+					"customfield_15761": [
+						{
+							"self": "https://jira.cleverdevices.com:8443/rest/api/2/customFieldOption/19561",
+							"value": "FAT",
+							"id": "19561"
+						}
+					]
+				}
+			},
+			{
+				"expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+				"id": "395577",
+				"self": "https://jira.cleverdevices.com:8443/rest/api/2/issue/395577",
+				"key": "SE-49105",
+				"fields": {
+					"summary": "Disruption Management Configuration and Setup",
+					"progress": {
+						"progress": 10800,
+						"total": 10800,
+						"percent": 100
+					},
+					"customfield_15761": [
+						{
+							"self": "https://jira.cleverdevices.com:8443/rest/api/2/customFieldOption/19561",
+							"value": "FAT",
+							"id": "19561"
+						}
+					]
+				}
+			},
+			{
+				"expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+				"id": "395576",
+				"self": "https://jira.cleverdevices.com:8443/rest/api/2/issue/395576",
+				"key": "SE-49104",
+				"fields": {
+					"summary": "Events Configuration and Testing",
+					"progress": {
+						"progress": 57600,
+						"total": 57600,
+						"percent": 100
+					},
+					"customfield_15761": [
+						{
+							"self": "https://jira.cleverdevices.com:8443/rest/api/2/customFieldOption/19561",
+							"value": "FAT",
+							"id": "19561"
+						}
+					]
+				}
+			},
+			{
+				"expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+				"id": "395575",
+				"self": "https://jira.cleverdevices.com:8443/rest/api/2/issue/395575",
+				"key": "SE-49103",
+				"fields": {
+					"summary": "Incident Management Configuration and Testing",
+					"progress": {
+						"progress": 10800,
+						"total": 10800,
+						"percent": 100
+					},
+					"customfield_15761": [
+						{
+							"self": "https://jira.cleverdevices.com:8443/rest/api/2/customFieldOption/19561",
+							"value": "FAT",
+							"id": "19561"
+						}
+					]
+				}
+			},
+			{
+				"expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+				"id": "395574",
+				"self": "https://jira.cleverdevices.com:8443/rest/api/2/issue/395574",
+				"key": "SE-49102",
+				"fields": {
+					"summary": "Product and Report Access Dispatch Groups",
+					"progress": {
+						"progress": 14400,
+						"total": 14400,
+						"percent": 100
+					},
+					"customfield_15761": [
+						{
+							"self": "https://jira.cleverdevices.com:8443/rest/api/2/customFieldOption/19561",
+							"value": "FAT",
+							"id": "19561"
+						}
+					]
+				}
+			},
+			{
+				"expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+				"id": "395573",
+				"self": "https://jira.cleverdevices.com:8443/rest/api/2/issue/395573",
+				"key": "SE-49101",
+				"fields": {
+					"summary": "Configure settings in CADMinistrator",
+					"progress": {
+						"progress": 43200,
+						"total": 43200,
+						"percent": 100
+					},
+					"customfield_15761": [
+						{
+							"self": "https://jira.cleverdevices.com:8443/rest/api/2/customFieldOption/19561",
+							"value": "FAT",
+							"id": "19561"
+						}
+					]
+				}
+			},
+			{
+				"expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+				"id": "395572",
+				"self": "https://jira.cleverdevices.com:8443/rest/api/2/issue/395572",
+				"key": "SE-49100",
+				"fields": {
+					"summary": "Non-Rev MAR Configuration to track non-rev vehicles",
+					"progress": {
+						"progress": 0,
+						"total": 0
+					},
+					"customfield_15761": [
+						{
+							"self": "https://jira.cleverdevices.com:8443/rest/api/2/customFieldOption/19561",
+							"value": "FAT",
+							"id": "19561"
+						}
+					]
+				}
+			},
+			{
+				"expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+				"id": "395571",
+				"self": "https://jira.cleverdevices.com:8443/rest/api/2/issue/395571",
+				"key": "SE-49099",
+				"fields": {
+					"summary": "Setup CADMobile Tablet",
+					"progress": {
+						"progress": 0,
+						"total": 0
+					},
+					"customfield_15761": [
+						{
+							"self": "https://jira.cleverdevices.com:8443/rest/api/2/customFieldOption/19561",
+							"value": "FAT",
+							"id": "19561"
+						}
+					]
+				}
+			},
+			{
+				"expand": "operations,versionedRepresentations,editmeta,changelog,renderedFields",
+				"id": "395570",
+				"self": "https://jira.cleverdevices.com:8443/rest/api/2/issue/395570",
+				"key": "SE-49098",
+				"fields": {
+					"summary": "Get CADMobile Tablet from Pierce Transit with SIM Card",
+					"progress": {
+						"progress": 3600,
+						"total": 3600,
+						"percent": 100
+					},
+					"customfield_15761": [
+						{
+							"self": "https://jira.cleverdevices.com:8443/rest/api/2/customFieldOption/19561",
+							"value": "FAT",
+							"id": "19561"
+						}
+					]
+				}
+			}
+		]
+	}
+}

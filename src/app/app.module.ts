@@ -10,16 +10,20 @@ import { NetworkDiagramView } from './DlhSoft/DlhSoft.ProjectData.PertChart.Angu
 import { HttpClientModule } from '@angular/common/http';
 import { StaffingListComponent } from './staffing-list/staffing-list.component';
 import { TicketListComponent } from './ticket-list/ticket-list.component';
+import {MatButtonModule} from '@angular/material/button';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
     AppComponent,
     GanttChartView, ScheduleChartView, LoadChartView,
-    PertChartView, NetworkDiagramView, StaffingListComponent, TicketListComponent
+    PertChartView, NetworkDiagramView, StaffingListComponent, TicketListComponent,
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

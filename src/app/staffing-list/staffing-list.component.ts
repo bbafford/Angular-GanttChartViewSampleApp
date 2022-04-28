@@ -8,6 +8,10 @@ import { StaffingService } from './staffing-list.service';
 import { Subscription } from 'rxjs';
 import { Staff } from '../models/staffing.model';
 
+//angular material buttons
+import {MatButtonModule} from '@angular/material/button';
+import { PropertyRead } from '@angular/compiler';
+
 @Component({
   selector: 'app-staffing-list',
   templateUrl: './staffing-list.component.html',
@@ -15,12 +19,18 @@ import { Staff } from '../models/staffing.model';
 })
 
 export class StaffingListComponent implements OnInit,OnDestroy{
-
-  title = 'GanttChartView sample';
-  private items:GanttChartItem[]=[];
-  settings: GanttChartSettings;
-  private gcv = DlhSoft.Controls.GanttChartView
+  
   onItemChanged: (item: GanttChartItem, propertyName: string, isDirect: boolean, isFinal: boolean) => void;
+  
+  testfunction(item: GanttChartItem, propertyName: string, isDirect: boolean, isFinal: boolean){
+    console.log("testing")
+  }
+  
+  title = 'GanttChartView sample';
+  public items:GanttChartItem[]=[];
+  public settings: GanttChartSettings;
+  private gcv = DlhSoft.Controls.GanttChartView
+
   private ganttChartView;
   private http:HttpClient
   staffing: Staff[] = []
@@ -32,8 +42,10 @@ export class StaffingListComponent implements OnInit,OnDestroy{
     this.http = http
   }
   
+
+
   ngOnInit(): void {
-    console.log("in ngOnInit")
+ 
     this.staffing = this.staffingService.getStaff();
     this.drawChart() 
       
@@ -220,13 +232,22 @@ export class StaffingListComponent implements OnInit,OnDestroy{
     this.ganttChartView = document.getElementById("staffing-gnattViewChart") as HTMLImageElement
  
     this.onItemChanged = (item, propertyName, isDirect, isFinal) => {
+      
       if (!isDirect || !isFinal) // Skip internal changes, and changes occurred during drag operations.
         return;
       console.log(propertyName + ' changed for ' + item.content + '.');
+      switch (propertyName ){
+          case 'start': {
+            //index +1 gets you the entry within the table for the item we are updating.  Once 
+            //the item is modified, we should push the change to a json object to 
+            //enable a post to the json server to make the change.  For that, we'll need the ID from the engineering
+            console.log(item.index)
+          }
+          case 'finish':{
+
+          }
+      }
     }
     
   }
-  
-
-
 }
